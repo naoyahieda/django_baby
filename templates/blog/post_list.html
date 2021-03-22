@@ -1,0 +1,15 @@
+<p>DjangoBaby チュートリアルのブログ一覧</p>
+<p>--------------------------------------------</p>
+
+{% for blog in blogs %}
+
+<div>
+    <p><a href="{% url 'post_detail' blog_id=blog.id %}">{{blog.title}}</a></p>
+    <p>{{blog.content}}</p>
+    <a>いいね数：{{blog.good}}</a>
+</div>
+<p>==================</p>
+{% endfor %}
+
+<p>--------------------------------------------</p>
+<p>HTMLファイルの中でfor文が使えていることを知ろう</p>

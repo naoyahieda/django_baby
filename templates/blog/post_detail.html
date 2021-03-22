@@ -1,0 +1,9 @@
+<a href="{% url "post_list" %}">一覧に戻る</a>
+
+<p>タイトル：{{blog.title}}</p>
+
+<p>内容:{{blog.content}}</p>
+
+<p>いいね数:{{blog.good}}</p>
+
+<a href="{% url "post_good" blog_id=blog.id %}">いいねする</a>
