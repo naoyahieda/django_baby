@@ -2,6 +2,8 @@ docker-compose up
 
 docker-compose up -d --build
 
+docker-compose run --rm web django-admin startproject config . 
+
 docker-compose run --rm web python manage.py makemigrations
 
 docker-compose run --rm web python manage.py makemigrations db
