@@ -7,7 +7,8 @@ def hello_func(request):
     return HttpResponse("Hello World")
 
 urlpatterns = [
-    path('hello/',hello_func),
-    path('blog/', include('blog.urls')),
-    path('admin/', admin.site.urls),
+    path('hello/',hello_func), #localhost:8000/helloときたらhello_funcを実行する。
+    path('blog/', include('blog.urls')),#blog/urls.pyにhttp://〇〇.△△/blog/~ の処理を全て任せている。
+    path('todo/', include('todo.urls')),#上と同じ、Todoバージョン
+    path('admin/', admin.site.urls),#管理サイトをDjangoが自動で生成
 ]

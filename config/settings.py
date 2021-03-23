@@ -16,6 +16,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'blog.apps.BlogConfig',
+    'todo.apps.TodoConfig',
 ]
 
 MIDDLEWARE = [
@@ -48,15 +49,19 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'config.wsgi.application'
 
-#これはデータベースの設定(MysqlやPostgresqlにもできる、デフォルトはsqlite)
+#データベースの設定(今回はPostgreSQLを使う)
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'postgres',
+        'USER': 'postgres',
+        'HOST': 'db',
+        'PORT': 5432,
+        'PASSWORD': 'somepassword',
     }
 }
 
-#これはパスワードの質を担保するもの、「password」などの単純なパスワードを使わせないよう設定している。
+#↓パスワードの質を担保するもの、「password」などの単純なパスワードを使わせないよう設定している。
 AUTH_PASSWORD_VALIDATORS = [
     {
         'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',

@@ -1,0 +1,7 @@
+<a href={% url "todo_list" %}>←戻る</a>
+
+<p>作者：{{todo.author}}</p>
+<p>タイトル：{{todo.title}}</p>
+<p>内容詳細：{{todo.content}}</p>
+
+<a href="{% url 'todo_delete' number=todo.id %}">削除する</a>

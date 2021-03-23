@@ -14,3 +14,5 @@ docker-compose run --rm web python manage.py createsuperuser
 
 docker-compose run --rm web python manage.py createcachetable
 https://github.com/naoyahieda/apollon-back/compare/master...naoya
+
+docker-compose run --rm web python manage.py startapp todo
