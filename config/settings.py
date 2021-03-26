@@ -81,7 +81,7 @@ AUTH_PASSWORD_VALIDATORS = [
 LANGUAGE_CODE = 'ja'
 
 #時間の設定(デフォルトは「UTC」=協定世界時(ロンドン時間)だが、「Asia/Tokyo」=日本時間に変えている)
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Asia/Tokyo'
 
 USE_I18N = True
 USE_L10N = True
